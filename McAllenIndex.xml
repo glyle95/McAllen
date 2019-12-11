@@ -73,8 +73,9 @@
                     <placeName>Brownsville, Texas</placeName>
                     <idno type="URI">http://syriaca.org/place/3052</idno>
                 </place>
-                <place xml:id="chal01">
-                    <placeName>Chalcis</placeName>
+                <place xml:id="mcal">
+                    <placeName>McAllen</placeName>
+			<placeName>McAllen, Texas</placeName>
                     <placeName source="http://syriaca.org/place/3052">Qenneshrin</placeName>
                     <location type="gps" source="http://syriaca.org/place/3052">
                         <geo>35.99861 36.99806</geo>
