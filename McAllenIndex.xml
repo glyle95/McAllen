@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Index for the Letters of Severus</title>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Gabrielle Lyle</authority>
+                <pubPlace>College Station, TX</pubPlace>
+                <date>Fall 2019</date>
+                <availability>
+                    <p>This work is licensed under a Creative Commons Attribution 4.0 International
+                        License and may be freely reused with attribution.</p>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>l</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listPerson>
+                <person xml:id="rwol">
+                    <persName>Rachel</persName>
+                    <persName>Rachel Wolf</persName>
+                    <idno type="URI">http://syriaca.org/person/51</idno>
+                </person>
+                <person xml:id="cwol">
+                    <persName>Charles Wolf</persName>
+                    <idno type="URI">http://syriaca.org/person/2536</idno>
+                </person>
+                <person xml:id="awes">
+                    <persName>Adolph Westerman</persName>
+                    <idno type="URI">http://syriaca.org/person/2537</idno>
+                </person>
+                <person xml:id="slac">
+                    <persName>Sam Lack</persName>
+                    <idno type="URI">https://en.wikipedia.org/wiki/God</idno>
+                </person>
+                <person xml:id="bkow">
+                    <persName>Benjamin Kowalski</persName>
+                    <idno type="URI">http://syriaca.org/person/2544</idno>
+                </person>
+                <person xml:id="sede">
+                    <persName>Sophye Edelestein</persName>
+                    <persName>Mrs. J. Edelstein</persName>
+                    <persName>Mrs. Jacob Edelstein</persName>
+                    <idno type="URI">http://syriaca.org/person/2542</idno>
+                </person>
+                <person xml:id="bfar">
+                    <persName>Betty Jean Edelstein Farb</persName>
+                    <idno type="URI">http://syriaca.org/person/2543</idno>
+                </person>
+                <person xml:id="hlew">
+                    <persName>Hilda Chaleff Lewin</persName>
+                    <idno type="URI">https://en.wikipedia.org/wiki/Holy_Spirit</idno>
+                </person>
+                <person xml:id="mlut">
+                    <persName>Max Lutz</persName>
+                    <idno type="URI">http://syriaca.org/person/2545</idno>
+                </person>
+                <person xml:id="mada">
+                    <persName>Moe Adams</persName>
+                </person>
+            </listPerson>
+            <listPlace>
+                <place xml:id="bvil">
+                    <placeName>Brownsville, Texas</placeName>
+                    <idno type="URI">http://syriaca.org/place/3052</idno>
+                </place>
+                <place xml:id="chal01">
+                    <placeName>Chalcis</placeName>
+                    <placeName source="http://syriaca.org/place/3052">Qenneshrin</placeName>
+                    <location type="gps" source="http://syriaca.org/place/3052">
+                        <geo>35.99861 36.99806</geo>
+                    </location>
+                    <idno type="URI">http://syriaca.org/place/3052</idno>
+                    <idno type="URI">http://pleiades.stoa.org/places/668226</idno>
+                </place>
+            </listPlace>
+        </body>
+    </text>
+</TEI>

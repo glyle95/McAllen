@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_customization.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0"
+  xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Title</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Publication Information</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Information about the source</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <schemaSpec ident="SeverusAntiochLetters" start="TEI">
+        <desc/>
+        <moduleRef key="header" include="authority availability fileDesc publicationStmt sourceDesc teiHeader titleStmt"/>
+        <moduleRef key="core" include="author bibl biblScope citedRange date editor head name note p pb pubPlace publisher resp respStmt title"/>
+        <moduleRef key="tei"/>
+        <moduleRef key="textstructure" include="body dateline div text trailer"/>
+        <moduleRef key="namesdates" include="persName placeName"/>
+        
+        <elementSpec ident="persName" module="namesdates" mode="change">
+          <content>
+            <textNode/>
+            <elementRef key="placeName"/>
+          </content>
+          <attList>
+            <attDef ident="ref">
+              <valList type="closed">
+                <valItem ident="#awes">
+                  <gloss>Adolph Westerman</gloss>
+                </valItem>
+                <valItem ident="#slac">
+                  <gloss>Sam Lack</gloss>
+                </valItem>
+                <valItem ident="#bkow">
+                  <gloss>Benjamin Kowlaski</gloss>
+                </valItem>
+                <valItem ident="#sede">
+                  <gloss>Sophye Edelstein, Mrs. J. Edelstein, Mrs. Jacob Edelstein</gloss>
+                </valItem>
+                <valItem ident="#alb">
+                  <gloss>Norma Westerman Albert</gloss>
+                </valItem>
+                <valItem ident="#bfar">
+                  <gloss>Betty Jean Edelstein Farb</gloss>
+                </valItem>
+                <valItem ident="#hlew">
+                  <gloss>Hilda Chaleff Lewin</gloss>
+                </valItem>
+                <valItem ident="#mlut">
+                  <gloss>Max Lutz</gloss>
+                </valItem>
+                <valItem ident="#mada">
+                  <gloss>Moe Adams</gloss>
+                </valItem>
+                <valItem ident="#zrik">
+                  <gloss>Zeb Rike</gloss>
+                </valItem>
+                <valItem ident="#ygel">
+                  <gloss>Rabbi Yonah B. Geller</gloss>
+                </valItem>
+                <valItem ident="#swol">
+                  <gloss>Rabbi Sidney Wolf</gloss>
+                </valItem>
+                <valItem ident="#fche">
+                  <gloss>Rev. Francis X. Cheney</gloss>
+                </valItem>
+                <valItem ident="#lher">
+                  <gloss>Louis Herman</gloss>
+                </valItem>
+                <valItem ident="#mwes">
+                  <gloss>Mary Westerman</gloss>
+                </valItem>
+                <valItem ident="#bfar">
+                  <gloss>Betty Jean Edelstein Farb</gloss>
+                </valItem>
+                <valItem ident="#hlew">
+                  <gloss>Hilda Chaleff Lewin</gloss>
+                </valItem>
+                <valItem ident="#mlut">
+                  <gloss>Max Lutz</gloss>
+                </valItem>
+                <valItem ident="#mada">
+                  <gloss>Moe Adams</gloss>
+                </valItem>
+                <valItem ident="#zrik">
+                  <gloss>Zeb Rike</gloss>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+        
+        <elementSpec ident="placeName" module="namesdates" mode="change">
+          <content>
+            <textNode/>
+          </content>
+          <attList>
+            <attDef ident="ref">
+              <valList type="closed">
+                <valItem ident="#chal01">
+                  <gloss>Chalcis</gloss>
+                </valItem>
+                <valItem ident="#pal01">
+                  <gloss>Paltus</gloss>
+                </valItem>
+              </valList>
+            </attDef>
+          </attList>
+        </elementSpec>
+        
+        <elementSpec ident="p" module="core" mode="change">
+          <content>
+            <sequence preserveOrder="false">
+              <elementRef key="note"/>
+              <elementRef key="pb"/>
+              <elementRef key="persName"/>
+              <elementRef key="placeName"/>
+            </sequence>
+          </content>
+          <constraintSpec ident="pInHeader" scheme="schematron">
+            <constraint>
+              <sch:rule context="tei:teiHeader//p">
+                <sch:report test="tei:note">
+                  A &lt;p&gt; element in the &lt;teiHeader&gt; may not contain a &lt;note&gt; element.
+                </sch:report>
+              </sch:rule>
+            </constraint>
+          </constraintSpec>
+        </elementSpec>
+        
+        
+        
+      </schemaSpec>
+    </body>
+  </text>
+</TEI>
+
